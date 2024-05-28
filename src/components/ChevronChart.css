@@ -1,0 +1,159 @@
+:root {
+  --chevron-triangle: 30px;
+}
+
+.chevron-chart {
+    display: flex;
+    width: calc(100dvw - var(--chevron-triangle));
+    margin-left:var(--chevron-triangle);
+    justify-content: space-around;
+  }
+  
+  .chevron {
+    flex:1;
+    height:100px;
+    position:relative;
+  }
+
+  .chevron::after,.chevron::before{
+    content:"";
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    position:absolute;
+    height:100%;
+    width:var(--chevron-triangle);
+    margin: 0;
+    padding: 0;
+    z-index:1;
+  }
+
+  .chevron::before{
+    right:100%;
+    top:0;
+    background-color: inherit;
+  }
+
+  .chevron::after{
+    right:0;
+    top:0;
+    background-color: #fff;
+  }
+  
+  .chevron-1 {
+    background-color: #002b36;
+  }
+  
+  .chevron-2 {
+    background-color: #073642;
+  }
+  
+  .chevron-3 {
+    background-color: #586e75;
+  }
+  
+  .chevron-4 {
+    background-color: #93a1a1;
+  }
+  
+  .chevron-5 {
+    background-color: #eee8d5;
+  }
+
+  .chevron-6 {
+    background-color: #b58900;
+  }
+  
+  .chevron-7 {
+    background-color: #cb4b16;
+  }
+  
+  .chevron-8 {
+    background-color: #dc322f;
+  }
+  
+  .chevron-9 {
+    background-color: #d33682;
+  }
+  
+  .chevron-10 {
+    background-color: #6c71c4;
+  }
+  
+  .chevron-11 {
+    background-color: #268bd2;
+  }
+  
+  .chevron-12 {
+    background-color: #2aa198;
+  }
+  
+  .chevron-13 {
+    background-color: #859900;
+  }
+  
+  .chevron-14 {
+    background-color: #657b83;
+  }
+  
+  .chevron-15 {
+    background-color: #839496;
+  }
+  
+  .chevron-16 {
+    background-color: #073642;
+  }
+  
+  .chevron-17 {
+    background-color: #002b36;
+  }
+  
+  .chevron-18 {
+    background-color: #93a1a1;
+  }
+  
+  .chevron-19 {
+    background-color: #eee8d5;
+  }
+  
+  .chevron-20 {
+    background-color: #fdf6e3;
+  }
+  
+  
+  @media (max-width: 600px) {
+    .chevron-chart {
+      flex-direction: column;
+      width: 100dvw;
+      height: calc(100dvh - var(--chevron-triangle));
+      margin-bottom:var(--chevron-triangle);
+      margin-left:0;
+      align-items: center;
+    }
+  
+    .chevron {
+      width: 100px;
+    }
+
+    .chevron::after,.chevron::before{
+      content:"";
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+      position:absolute;
+      height:var(--chevron-triangle);
+      width:100%;
+      margin: 0;
+      padding: 0;
+      left:0;
+      right:auto;
+      z-index:1;
+    }
+
+    .chevron::before{
+      background-color: #fff;
+    }
+  
+    .chevron::after{
+      top:100%;
+      background-color: inherit;
+      z-index:2;
+    }
+  }
+  
